@@ -40,7 +40,7 @@ const backToHome = () => {
 
             <button onClick={() => navigate('/fish')} className="btn  m-6 hover:bg-green-700 h-36 w-36 btn-circle btn-outline">
                 <img  className='p-4'  src={category3} alt="" />
-                <h1 className=' text-xl '>মাছ</h1>
+                <h1 className=' text-xl '>মাছ </h1>
             </button>
 
             <button onClick={() => navigate('/shak')} className="btn  m-6 hover:bg-green-700 h-36 w-36 btn-circle btn-outline">
@@ -70,7 +70,7 @@ const backToHome = () => {
 
             <button onClick={() => navigate('/chicken')} className="btn  m-6 hover:bg-green-700 h-36 w-36 btn-circle btn-outline">
                 <img  className='p-4'  src={category9} alt="" />
-                <h1 className=' text-xl '>মুরগী</h1>
+                <h1 className=' text-xl '>মাংস</h1>
             </button>
 
 

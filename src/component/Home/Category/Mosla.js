@@ -4,7 +4,7 @@ import useProduct from '../../../hooks/useProduct';
 const Mosla = () => {
     const [products] = useProduct([]);
 
-    const category = 'spices';
+    const category = 'মসলা';
     const singleVegetable = products.filter(product => category == product.category)
 
     return (
