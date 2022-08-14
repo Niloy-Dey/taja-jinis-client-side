@@ -55,8 +55,8 @@ function App() {
         <Route path='/fish' element={<Fish></Fish>}></Route>
         <Route path='/fruit' element={<Fruit></Fruit>}></Route>
         <Route path='/mosla' element={<Mosla></Mosla>}></Route>
-        <Route path='/shak' element={<Sutki></Sutki>}></Route>
-        <Route path='/sutki' element={<Shak></Shak>}></Route>
+        <Route path='/sutki' element={<Sutki></Sutki>}></Route>
+        <Route path='/shak' element={<Shak></Shak>}></Route>
         <Route path='/rice' element={<Rice></Rice>}></Route>
         <Route path='/vegetable' element={<Vegetable></Vegetable>}></Route>
 
@@ -85,7 +85,7 @@ function App() {
 
 
         <Route path='/admin' element={<Admin></Admin>}>
-          <Route path='allUsers' element={<AllUsers></AllUsers>}></Route>
+          <Route path='allUsers/' element={<AllUsers></AllUsers>}></Route>
           <Route path='allOrder' element={<AllOrder></AllOrder>}></Route>
           <Route path='allPayment' element={<AllPayment></AllPayment>}></Route>
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>

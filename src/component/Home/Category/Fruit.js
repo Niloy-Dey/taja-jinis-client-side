@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useProduct from '../../../hooks/useProduct';
-
+import LoadingSpiner from '../../Shared/LoadingSpiner';
 const Fruit = () => {
     const [products] = useProduct([]);
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => setIsLoading(false), 1000)
+    }, [setIsLoading])
+
 
     const category = 'fruit';
+    // const category = 'ফল';
     const singleVegetable = products.filter(product => category == product.category)
-
+    if (isLoading === true) {
+        return <LoadingSpiner> </LoadingSpiner>
+    }
     return (
         <div className='py-40 px-10 bg-green-50'>
         <div className='grid lg:grid-cols-3 md:grid-cols-2  gap-10  ' >
