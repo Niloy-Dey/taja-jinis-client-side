@@ -1,16 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useProduct from '../../../hooks/useProduct';
+import LoadingSpiner from '../../Shared/LoadingSpiner';
 
 const Vegetable = () => {
+    const navigate = useNavigate()
+
     const [products] = useProduct([]);
+    const [isLoading, setIsLoading] = useState(true);
 
-    const category ="vegetable";
+    useEffect(() => {
+        setTimeout(() => setIsLoading(false), 1000)
+    }, [setIsLoading])
+
+    const category = "vegetable";
     // const category ="সবজি";
-    const singleVegetable = products.filter(product => category == product.category)
+    const singleVegetable = products.filter(product => category === product.category)
+    // console.log(singleProduct)
+    if (isLoading === true) {
+        return <LoadingSpiner> </LoadingSpiner>
+    }
 
-    // console.log(products);
-    // console.log(singleVegetable);
+    // const dataPass =(id) =>{
+    //     navigate(`/vegetable/${id}`)
+    // }
 
+    // setTimeout(()=>setIsLoading(false), 2000 )
     return (
         <div className='py-40 flex justify-center items-center bg-green-50'>
             <div className='grid lg:grid-cols-3 md:grid-cols-2  gap-8  ' >
@@ -27,6 +43,7 @@ const Vegetable = () => {
                                 <h2>দাম : {sv.price}</h2>
                                 <h2 className='text-sm'>বর্ণনা: <span className='text-sm'> {sv.description}</span></h2>
                                 <div class="card-actions justify-end">
+                                    {/* <button onClick={()=>dataPass(sv.id)} class="btn btn-sm ">ক্রয় করুন </button> */}
                                     <button class="btn btn-sm ">ক্রয় করুন </button>
                                 </div>
                             </div>

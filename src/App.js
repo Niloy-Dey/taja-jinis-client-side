@@ -85,7 +85,7 @@ function App() {
 
 
         <Route path='/admin' element={<Admin></Admin>}>
-          <Route path='allUsers' element={<AllUsers></AllUsers>}></Route>
+          <Route path='allUsers/' element={<AllUsers></AllUsers>}></Route>
           <Route path='allOrder' element={<AllOrder></AllOrder>}></Route>
           <Route path='allPayment' element={<AllPayment></AllPayment>}></Route>
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>

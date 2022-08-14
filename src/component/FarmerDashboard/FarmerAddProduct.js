@@ -1,6 +1,8 @@
 import { dblClick } from '@testing-library/user-event/dist/click';
 import React from 'react';
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const FarmerAddProduct = () => {
   
@@ -55,7 +57,9 @@ const FarmerAddProduct = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
+                        toast("আপনার ডাটা গৃহীত হয়েছে")
                         // console.log(postSingleProduct);
+                        document.getElementById("myForm").reset();
                     })
             }
         })
@@ -81,9 +85,9 @@ const FarmerAddProduct = () => {
 
     return (
 
-        <div className='my-10 bg-green-50 lg:ml-96 md:mx-auto mx-auto card shadow-lg  lg:w-96 md:w-96 w-80'>
+        <div className='my-10 pt-16 bg-green-50 lg:ml-[200] md:mx-auto mx-auto card shadow-lg  lg:w-96 md:w-96 w-80'>
 
-            <form onSubmit={addItem} className='my-4 text-center from-design w-full p-3 '>
+            <form onSubmit={addItem} id="myForm" className='my-4 text-center from-design w-full p-3 '>
                 <h1 className='text-center text-2xl text-orange-500  font-bold '>পণ্য যোগ করুন</h1>
                 <input className='border-2  outline-0 p-2 m-2  w-full rounded-lg' placeholder='পণ্যের ক্যাটাগরি লিখুন' type="text" name="category" id="" /><br />
                 <input className='border-2  outline-0 p-2 m-2  w-full rounded-lg' placeholder='পণ্যের নাম লিখুন' type="text" name="name" id="" /><br />
@@ -100,7 +104,7 @@ const FarmerAddProduct = () => {
                     <img src={image === '' ? '' :URL.createObjectURL(image) } alt="" />                
             </div>  */}
 
-
+        <ToastContainer />
         </div>
 
     );
