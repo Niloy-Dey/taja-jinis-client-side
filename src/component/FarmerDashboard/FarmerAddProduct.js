@@ -46,7 +46,7 @@ const FarmerAddProduct = () => {
         
                 /* posting data to database  */
         
-                fetch(`http://localhost:5000/products`, {
+                fetch(`https://taja-jinis.herokuapp.com/products`, {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

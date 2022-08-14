@@ -60,7 +60,7 @@ const backToHome = () => {
 
             <button onClick={() => navigate('/rice')} className="btn  m-6 hover:bg-green-700 h-36 w-36 btn-circle btn-outline">
                 <img  className='p-4'  src={category7} alt="" />
-                <h1 className=' text-xl '>ধান</h1>
+                <h1 className=' text-xl '>চাল</h1>
             </button>
 
             <button onClick={() => navigate('/fruit')} className="btn  m-6 hover:bg-green-700 h-36 w-36 btn-circle btn-outline">

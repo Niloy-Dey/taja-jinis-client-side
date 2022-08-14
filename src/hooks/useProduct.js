@@ -6,9 +6,13 @@ const useProduct = () =>{
     const [products, setProducts] = useState([]);
 // console.log(tools);
     useEffect(()=>{
-        fetch(`http://localhost:5000/products`)
+        fetch(`https://taja-jinis.herokuapp.com/products`)
+        // fetch('http://localhost:5000/products')
         .then(res => res.json())
-        .then(data =>setProducts(data));
+        .then(data =>{
+            setProducts(data);
+            // console.log(data);
+        });
     } , [])
 
 

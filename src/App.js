@@ -55,8 +55,8 @@ function App() {
         <Route path='/fish' element={<Fish></Fish>}></Route>
         <Route path='/fruit' element={<Fruit></Fruit>}></Route>
         <Route path='/mosla' element={<Mosla></Mosla>}></Route>
-        <Route path='/shak' element={<Sutki></Sutki>}></Route>
-        <Route path='/sutki' element={<Shak></Shak>}></Route>
+        <Route path='/sutki' element={<Sutki></Sutki>}></Route>
+        <Route path='/shak' element={<Shak></Shak>}></Route>
         <Route path='/rice' element={<Rice></Rice>}></Route>
         <Route path='/vegetable' element={<Vegetable></Vegetable>}></Route>
 

@@ -5,7 +5,8 @@ const Fish = () => {
 
     const [products] = useProduct([]);
 
-    const category = 'মাছ';
+    // const category = 'মাছ';
+    const category = 'fish';
     const singleVegetable = products.filter(product => category == product.category)
 
 

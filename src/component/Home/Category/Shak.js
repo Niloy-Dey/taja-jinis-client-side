@@ -1,10 +1,12 @@
 import React from 'react';
 import useProduct from '../../../hooks/useProduct';
 
+
 const Shak = () => {
     const [products] = useProduct([]);
-
-    const category = 'শাক';
+    console.log(products);
+    const category = "shak";
+    // const category = "শাক";
     const singleVegetable = products.filter(product => category == product.category)
 
     return (

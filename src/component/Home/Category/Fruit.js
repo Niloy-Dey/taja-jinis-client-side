@@ -4,7 +4,8 @@ import useProduct from '../../../hooks/useProduct';
 const Fruit = () => {
     const [products] = useProduct([]);
 
-    const category = 'ফল';
+    const category = 'fruit';
+    // const category = 'ফল';
     const singleVegetable = products.filter(product => category == product.category)
 
     return (

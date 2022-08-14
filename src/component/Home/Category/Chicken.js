@@ -3,10 +3,11 @@ import useProduct from '../../../hooks/useProduct';
 
 const Chicken = () => {
     const [products] = useProduct([]);
-
-    const category = 'মাংস';
+console.log(products);
+    const category = 'chicken';
+    // const category = "মাংস";
     const singleVegetable = products.filter(product => category == product.category)
-
+console.log(singleVegetable)
     return (
         <div className='py-40 px-10 bg-green-50'>
             <div className='grid lg:grid-cols-3 md:grid-cols-2  gap-10  ' >
