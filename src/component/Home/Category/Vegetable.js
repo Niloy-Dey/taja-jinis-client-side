@@ -32,7 +32,7 @@ const Vegetable = () => {
             <div className='grid lg:grid-cols-3 md:grid-cols-2  gap-8  ' >
                 {
                     singleVegetable.map(sv =>
-                        <div class="card lg:w-96 md:w-80 w-80 bg-green-100 shadow-xl ">
+                        <div class="card lg:w-96 md:w-80 w-80 mx-auto bg-green-100 shadow-xl ">
                             {/*<figure><img src={image === '' ? '' :URL.createObjectURL(image) } alt="" /> </figure>                */}
                             <figure><img src={sv.image} className="w-full h-52" alt="Shoes" /></figure>
                             <div class="card-body">

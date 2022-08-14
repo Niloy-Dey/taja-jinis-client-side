@@ -38,7 +38,7 @@ const admin = '';
 
     return (
         <div>
-            <div className="navbar flex justify-between fixed top-0 z-50 bg-green-700 text-white font-bold">
+            <div className="navbar flex justify-between fixed top-0 z-40 bg-green-700 text-white font-bold">
                 <div className="navbar-start">
                     <Link to="/home" className="btn btn-ghost normal-case text-xl">তাজা জিনিস</Link>
                 </div>
