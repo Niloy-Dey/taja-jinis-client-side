@@ -5,7 +5,7 @@ import bijon from '../../../assets/developer/bijon.png';
 import etu from '../../../assets/developer/etu.jpg'
 import najnin from '../../../assets/developer/nipa.jpg'
 import arpita from '../../../assets/developer/arpita.png'
-import noshin from '../../../assets/developer/noshin.png'
+import noshin from '../../../assets/developer/noshin.jpg'
 import './Developer.css'
 import About from '../../About/About';
 const Developer = () => {
@@ -83,7 +83,7 @@ const Developer = () => {
                         <div className="image h-full ">
                             <img className='image-full' src={arpita} alt="" />
                         </div>
-                        <div className="content fw-bolder text-black">
+                        <div className="content fw-bolder text-white">
                             <h3 className="name text-lg font-bold">Arpita Dhar</h3>
                             <span className="designation ">Advisor</span>
                         </div>
@@ -96,7 +96,7 @@ const Developer = () => {
                         <div className="image h-full ">
                             <img className='image-full' src={noshin} alt="" />
                         </div>
-                        <div className="content fw-bolder text-black">
+                        <div className="content fw-bolder text-white">
                             <h3 className="name text-lg font-bold">Umme Noshin Shefa</h3>
                             <span className="designation ">Supervisor</span>
                         </div>
