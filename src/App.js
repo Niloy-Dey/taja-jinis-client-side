@@ -34,6 +34,8 @@ import Sutki from './component/Home/Category/Sutki';
 import Vegetable from './component/Home/Category/Vegetable';
 import Home from './component/Home/Home';
 import NotFound from './component/NotFound/NotFound';
+import CompletedOrder from './component/Order/CompletedOrder';
+import Order from './component/Order/Order';
 import Footer from './component/Shared/Footer';
 import Navbar from './component/Shared/Navbar';
 
@@ -93,6 +95,8 @@ function App() {
           <Route path='allReview' element={<AllReview></AllReview>}></Route>
         </Route>
 
+        <Route path='/order/:productId' element={<Order></Order>}></Route>
+        <Route path='/completedOrder' element={<CompletedOrder></CompletedOrder>}></Route>
 
       </Routes>
       <Footer></Footer>
