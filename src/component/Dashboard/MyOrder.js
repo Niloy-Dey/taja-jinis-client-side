@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import ShowsAllOrder from './ShowsAllOrder';
 
 const MyOrder = () => {
     const [allOrders, setAllOrders] = useState([]);
@@ -11,14 +10,19 @@ const MyOrder = () => {
 
     // console.log(allOrders)
     useEffect(() => {
-        fetch('https://taja-jinis.herokuapp.com/orderDetails')
+        fetch('https://manufacture-n.herokuapp.com/orderDetails')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
                 setAllOrders(data);
+                
             })
+            
     })
-
+// console.log(allOrders);
+// allOrders.map(o =>{
+//     console.log(o._id);
+// })
     const selectedOrders = allOrders.filter( order => {
         // console.log(order.userEmail)
         if(order.userEmail === email){
@@ -27,12 +31,11 @@ const MyOrder = () => {
     })
 
 
-
     const handleDelete = id => {
         console.log(id);
         const proceed = window.confirm('Are you sure delete this item ?');
         if (proceed) {
-            // const url = `http://localhost:5000/products/${id}`;
+            // const url = `http://localhost:5000/orderDetails/${id}`;
             const url = `https://manufacture-n.herokuapp.com/orderDetails/${id}`;
             fetch(url, {
                 method: 'DELETE'
@@ -44,7 +47,6 @@ const MyOrder = () => {
                     setAllOrders(remaining);
                                           
                 })
-
         }
     }
     return (
@@ -67,6 +69,7 @@ const MyOrder = () => {
                             <tbody>
                                 {
                                     selectedOrders.map((o, index) => 
+                                
                                         <tr>
                                         <th>{index + 1 } </th>
                                         <td>
@@ -82,7 +85,7 @@ const MyOrder = () => {
                                         <td>{o.userEmail}</td>
                                         <td>{o.totalQuantity}</td>
                                         <td>{o.totalAmount}</td>
-                                        <th><button  onClick={() => handleDelete(o.productId)}  class="btn btn-sm  bg-red-100 text-black hover:text-white">Delete</button></th>
+                                        <th><button  onClick={() => handleDelete(o._id)}  class="btn btn-sm  bg-red-100 text-black hover:text-white">Delete</button></th>
                                         <th><button class="btn btn-sm  bg-green-100 text-black hover:text-white">payment</button></th>
                                     </tr>
                                     )
