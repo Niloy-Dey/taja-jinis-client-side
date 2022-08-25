@@ -47,8 +47,8 @@ const AllOrder = () => {
                                         <td>{o.userEmail}</td>
                                         <td>{o.totalQuantity}</td>
                                         <td>{o.totalAmount}</td>
-                                        <th><button class="btn btn-sm  bg-red-100 text-black hover:text-white">Delete</button></th>
-                                        <th><button class="btn btn-sm  bg-green-100 text-black hover:text-white">payment</button></th>
+                                        <th><button disabled class="btn btn-sm  bg-red-100 text-black hover:text-white">Delete</button></th>
+                                        <th><button disabled class="btn btn-sm  bg-green-100 text-black hover:text-white">payment</button></th>
                                     </tr>
                                     )
                                 }

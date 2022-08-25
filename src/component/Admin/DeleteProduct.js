@@ -14,7 +14,7 @@ const DeleteProduct = () => {
         const proceed = window.confirm('Are you sure delete this item ?');
         if (proceed) {
             // const url = `http://localhost:5000/products/${id}`;
-            const url = `https://manufacture-n.herokuapp.com/product/${id}`;
+            const url = `https://taja-jinis.herokuapp.com/product/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

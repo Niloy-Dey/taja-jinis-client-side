@@ -12,7 +12,7 @@ const FarmerDeleteProduct = () => {
         console.log(id);
         const proceed = window.confirm('Are you sure delete this item ?');
         if (proceed) {
-            const url = `https://manufacture-n.herokuapp.com/products/${id}`;
+            const url = `https://taja-jinis.herokuapp.com/products/${id}`;
             // const url = `http://localhost:5000/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
