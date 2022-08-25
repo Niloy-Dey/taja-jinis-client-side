@@ -3,12 +3,16 @@ import MessengerCustomerChat from 'react-messenger-customer-chat/lib/MessengerCu
 
 const Messenger = () => {
     return (
-        <div>
+        <div className=''>
              <MessengerCustomerChat
-                pageId="<PAGE_ID>"
-                appId="<APP_ID>"
-                htmlRef="<REF_STRING>"
+                pageId="102682828378542"
+                appId="744630273318213"
+                // htmlRef="<REF_STRING>"
             />
+
+            {/*   <!-- messenger app id 744630273318213  
+                page id  102682828378542
+  --> */}
         </div>
     );
 };

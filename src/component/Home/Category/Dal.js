@@ -25,8 +25,8 @@ const Dal = () => {
     }
 
     return (
-        <div className='py-40 px-10 bg-green-50'>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2  gap-10  ' >
+        <div className='py-40 flex justify-center items-center bg-green-50'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2  gap-8  ' >
             {
                 singleVegetable.map( sv => 
                 

@@ -23,7 +23,7 @@ const Fruit = () => {
 
 
     return (
-        <div className='py-40 px-10 bg-green-50'>
+        <div className='py-40 flex justify-center items-center bg-green-50'>
         <div className='grid lg:grid-cols-3 md:grid-cols-2  gap-10  ' >
         {
             singleVegetable.map( sv => 

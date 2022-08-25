@@ -25,6 +25,28 @@ const MyOrder = () => {
             return order;
         }
     })
+
+
+
+    const handleDelete = id => {
+        console.log(id);
+        const proceed = window.confirm('Are you sure delete this item ?');
+        if (proceed) {
+            // const url = `http://localhost:5000/products/${id}`;
+            const url = `https://manufacture-n.herokuapp.com/orderDetails/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = allOrders.filter(order => order._id !== id);
+                    setAllOrders(remaining);
+                                          
+                })
+
+        }
+    }
     return (
         <div>
             <div className='  mx-10 '>
@@ -60,7 +82,7 @@ const MyOrder = () => {
                                         <td>{o.userEmail}</td>
                                         <td>{o.totalQuantity}</td>
                                         <td>{o.totalAmount}</td>
-                                        <th><button class="btn btn-sm  bg-red-100 text-black hover:text-white">Delete</button></th>
+                                        <th><button  onClick={() => handleDelete(o.productId)}  class="btn btn-sm  bg-red-100 text-black hover:text-white">Delete</button></th>
                                         <th><button class="btn btn-sm  bg-green-100 text-black hover:text-white">payment</button></th>
                                     </tr>
                                     )

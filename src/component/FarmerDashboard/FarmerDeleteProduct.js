@@ -5,8 +5,7 @@ import useProduct from '../../hooks/useProduct';
 
 const FarmerDeleteProduct = () => {
 
-    const [products] = useProduct([]);
-    const [product, setProduct] = useState([]);
+    const [products, setProducts] = useProduct([]);
 
 
     const handleDelete = id => {
@@ -14,13 +13,15 @@ const FarmerDeleteProduct = () => {
         const proceed = window.confirm('Are you sure delete this item ?');
         if (proceed) {
             const url = `https://manufacture-n.herokuapp.com/products/${id}`;
+            // const url = `http://localhost:5000/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
-                        const remaining = product.filter(order => order._id !== id);
-                        setProduct(remaining);
+                    console.log(data);
+                        const remaining = products.filter(order => order._id !== id);
+                        setProducts(remaining);
                                           
                 })
 
