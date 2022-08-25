@@ -16,7 +16,7 @@ const AllReview = () => {
         const proceed = window.confirm('Are you sure delete this item ?');
         if (proceed) {
             // const url = `http://localhost:5000/products/${id}`;
-            const url = `https://manufacture-n.herokuapp.com/review/${id}`;
+            const url = `https://taja-jinis.herokuapp.com/review/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -41,7 +41,7 @@ const AllReview = () => {
                             <div className='my-5 bg-green-100 p-6 w-80  rounded-lg  shadow-lg '>
                                 <h1 className='py-3 text-xl '><b>ক্লায়েন্ট নাম :</b>  {review.name} </h1>
                                 <p><b>রিভিউ : </b>{review.comment} </p>
-                                <button className='btn btn-sm my-3'>Delete review</button>
+                                <button onClick={() => handleDelete(review._id)} className='btn btn-sm my-3'>Delete review</button>
                             </div>
                         )
                     }
