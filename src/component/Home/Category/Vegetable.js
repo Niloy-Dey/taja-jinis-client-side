@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import useProduct from '../../../hooks/useProduct';
 import LoadingSpiner from '../../Shared/LoadingSpiner';
 
 const Vegetable = () => {
     const navigate = useNavigate()
-
+ 
     const [products] = useProduct([]);
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
@@ -16,7 +18,6 @@ const Vegetable = () => {
     const category = "vegetable";
     // const category ="সবজি";
     const singleVegetable = products.filter(product => category === product.category)
-    // console.log(singleProduct)
     if (isLoading === true) {
         return <LoadingSpiner> </LoadingSpiner>
     }
@@ -25,6 +26,8 @@ const Vegetable = () => {
         navigate(`/order/${id}`)
     }
 
+
+   
     return (
         <div className='py-40 flex justify-center items-center bg-green-50'>
             <div className='grid lg:grid-cols-3 md:grid-cols-2  gap-8  ' >

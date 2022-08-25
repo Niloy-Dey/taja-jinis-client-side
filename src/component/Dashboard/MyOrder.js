@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 import ShowsAllOrder from './ShowsAllOrder';
 
 const MyOrder = () => {
     const [allOrders, setAllOrders] = useState([]);
+    const [user] = useAuthState(auth);
+    const email = user?.email;
+
     // console.log(allOrders)
     useEffect(() => {
         fetch('https://taja-jinis.herokuapp.com/orderDetails')
@@ -12,6 +17,13 @@ const MyOrder = () => {
                 // console.log(data);
                 setAllOrders(data);
             })
+    })
+
+    const selectedOrders = allOrders.filter( order => {
+        // console.log(order.userEmail)
+        if(order.userEmail === email){
+            return order;
+        }
     })
     return (
         <div>
@@ -32,22 +44,22 @@ const MyOrder = () => {
                                 </thead>
                             <tbody>
                                 {
-                                    allOrders.map((allOrder, index) => 
+                                    selectedOrders.map((o, index) => 
                                         <tr>
                                         <th>{index + 1 } </th>
                                         <td>
                                             <div class="flex items-center space-x-3">
                                                 <div class="avatar">
                                                     <div class="mask mask-squircle w-12 h-12">
-                                                        <img src={allOrder.productImage} alt="" />
+                                                        <img src={o.productImage} alt="" />
                                                     </div>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>{allOrder.productName}</td>
-                                        <td>{allOrder.userEmail}</td>
-                                        <td>{allOrder.totalQuantity}</td>
-                                        <td>{allOrder.totalAmount}</td>
+                                        <td>{o.productName}</td>
+                                        <td>{o.userEmail}</td>
+                                        <td>{o.totalQuantity}</td>
+                                        <td>{o.totalAmount}</td>
                                         <th><button class="btn btn-sm  bg-red-100 text-black hover:text-white">Delete</button></th>
                                         <th><button class="btn btn-sm  bg-green-100 text-black hover:text-white">payment</button></th>
                                     </tr>
