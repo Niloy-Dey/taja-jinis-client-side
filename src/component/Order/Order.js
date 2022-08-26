@@ -20,7 +20,7 @@ const Order = () => {
         const userMobile = event.target.userMobile.value;
 
         const orderDetails = {
-            productId: _id,
+            id: _id,
             productName: name,
             productImage: image,
             productPrice:price,

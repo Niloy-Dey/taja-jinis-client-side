@@ -33,6 +33,7 @@ import Shak from './component/Home/Category/Shak';
 import Sutki from './component/Home/Category/Sutki';
 import Vegetable from './component/Home/Category/Vegetable';
 import Home from './component/Home/Home';
+import Messenger from './component/Messenger/Messenger';
 import NotFound from './component/NotFound/NotFound';
 import CompletedOrder from './component/Order/CompletedOrder';
 import Order from './component/Order/Order';
@@ -48,7 +49,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/contract' element={<Contract></Contract>}></Route>
+        <Route path='/contact' element={<Contract></Contract>}></Route>
         <Route path='/about' element={<About></About>}></Route>
 
         <Route path='/category' element={<Category></Category>}></Route>
@@ -98,7 +99,9 @@ function App() {
         <Route path='/order/:productId' element={<Order></Order>}></Route>
         <Route path='/completedOrder' element={<CompletedOrder></CompletedOrder>}></Route>
 
+      
       </Routes>
+      <Messenger></Messenger>
       <Footer></Footer>
     </div>
   )

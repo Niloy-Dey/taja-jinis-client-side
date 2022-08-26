@@ -11,7 +11,7 @@ const Admin = () => {
         <div className="drawer drawer-mobile mt-20">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
-            <h1>hello Admin</h1>
+           
             <Outlet></Outlet>
             {/* <label for="my-drawer" className="btn btn-primary drawer-button"> Open </label> */}
         </div>

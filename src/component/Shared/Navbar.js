@@ -18,7 +18,7 @@ const admin = '';
         <li><NavLink to="/home">হোম</NavLink></li>
         <li><NavLink to="/category">ক্যাটাগরি</NavLink></li>
         <li><NavLink to="/about">আমাদের সম্পর্কে</NavLink></li>
-        <li><NavLink to="/contract">যোগাযোগ</NavLink></li>
+        <li><NavLink to="/contact">যোগাযোগ</NavLink></li>
         {
             user && <li><NavLink to="/dashboard"> ড্যাশবোর্ড</NavLink></li>
         }
