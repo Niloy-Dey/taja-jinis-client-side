@@ -51,10 +51,10 @@ const Footer = () => {
       </div> */}
     </footer>
 
-    <h3 className="text-center">Build By <span className="special-text text-warning">Taja jinis</span> &copy;Copyright All
-        Right Reserved. </h3>
+    <h3 className="text-center"> <span className="special-text text-warning">তাজা জিনিস</span> দ্বারা নির্মিত &copy;<span className="special-text text-warning"> কপিরাইট </span> সর্বস্বত্ব সংরক্ষিত</h3>
     </div>
   );
 };
 
 export default Footer;
+ 

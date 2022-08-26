@@ -19,10 +19,7 @@ const MyOrder = () => {
             })
             
     })
-// console.log(allOrders);
-// allOrders.map(o =>{
-//     console.log(o._id);
-// })
+
     const selectedOrders = allOrders.filter( order => {
         // console.log(order.userEmail)
         if(order.userEmail === email){
@@ -56,14 +53,14 @@ const MyOrder = () => {
                             <table class="table w-full ">
                                 <thead>
                                     <tr>
-                                        <th>serial</th>
-                                        <th>Image</th>
-                                        <th>product Name</th>
-                                        <th>user email</th>
-                                        <th>Total Quantity</th>
-                                        <th>Total Amount</th>
-                                        <th>Delete</th>
-                                        <th>payment</th>
+                                        <th>সিরিয়াল </th>
+                                        <th>ছবি </th>
+                                        <th>প্রোডাক্ট নাম </th>
+                                        <th>ব্যবহারকারী ইমেইল</th>
+                                        <th>মোট পরিমাণ</th>
+                                        <th>সর্বমোট পরিমাণ</th>
+                                        <th>মুছে ফেলুন</th>
+                                        <th>পেমেন্ট</th>
                                     </tr>
                                 </thead>
                             <tbody>
@@ -85,8 +82,8 @@ const MyOrder = () => {
                                         <td>{o.userEmail}</td>
                                         <td>{o.totalQuantity}</td>
                                         <td>{o.totalAmount}</td>
-                                        <th><button  onClick={() => handleDelete(o._id)}  class="btn btn-sm  bg-red-100 text-black hover:text-white">Delete</button></th>
-                                        <th><button class="btn btn-sm  bg-green-100 text-black hover:text-white">payment</button></th>
+                                        <th><button  onClick={() => handleDelete(o._id)}  class="btn btn-sm  bg-red-100 text-black hover:text-white">মুছে ফেলুন</button></th>
+                                        <th><button class="btn btn-sm  bg-green-100 text-black hover:text-white">পেমেন্ট</button></th>
                                     </tr>
                                     )
                                 }
