@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from './Banner/Banner';
 import Category from './Category/Category';
 import Developer from './Developer/Developer';
+import UpdateDeveloper from './Developer/UpdateDeveloper';
 import NeedHelp from './NeedHelp/NeedHelp';
 import Offer from './Offer/Offer';
 import ShowReview from './ShowReview';
@@ -21,7 +22,8 @@ const Home = () => {
 
 
             <h2 className="text-center font-bold text-3xl  my-10">আমাদে <span className="text-warning">র প্র</span>কৌশলীরা</h2>
-            <Developer></Developer>
+            {/* <Developer></Developer> */}
+            <UpdateDeveloper></UpdateDeveloper>
 
             <ShowReview></ShowReview>
 
