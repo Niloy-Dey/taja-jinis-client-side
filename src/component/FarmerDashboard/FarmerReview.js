@@ -10,12 +10,11 @@ const FarmerReview = () => {
 
 
 
-        const url = `https://mysterious-forest-77053.herokuapp.com/review`;
+        const url = `https://taja-jinis.herokuapp.com/review`;
         fetch(url, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
-
             },
             body: JSON.stringify(review)
         })
