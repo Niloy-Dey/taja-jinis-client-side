@@ -6,10 +6,14 @@ import UpdateDeveloper from './Developer/UpdateDeveloper';
 import NeedHelp from './NeedHelp/NeedHelp';
 import Offer from './Offer/Offer';
 import ShowReview from './ShowReview';
+import Marquee from 'react-fast-marquee';
 
 const Home = () => {
     return (
         <div className='mt-16 bg-green-50'>
+              <Marquee gradient="true"  gradientWidth="0" className='pt-5 pb-2 bg-neutral font-bold text-xl text-white  ' speed="40">
+            আমাদের ওয়েবসাইট মেনটেনেন্স এর কাজ চলছে সাময়িক অসুবিধার জন্য আমরা আন্তরিকভাবে দুঃখিত
+            </Marquee>
             <Banner></Banner>
 
             <h1 className="text-center font-bold text-3xl  my-10"><u className="underline">ক্যা<span className="text-warning">টা</span>গরি</u></h1>
