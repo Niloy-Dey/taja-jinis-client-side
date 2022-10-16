@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './component/About/About';
+import FarmerRequest from './component/AccessingProcess/FarmerRequest';
 import Login from './component/AccessingProcess/Login';
 import SignUp from './component/AccessingProcess/SignUp';
 import AddProduct from './component/Admin/AddProduct';
@@ -67,6 +68,7 @@ function App() {
 
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signUp' element={<SignUp></SignUp>}></Route>
+        <Route path='/FarmerRequest' element={<FarmerRequest></FarmerRequest>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
 

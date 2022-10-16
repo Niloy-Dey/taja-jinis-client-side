@@ -31,7 +31,7 @@ const admin = '';
         <li><NavLink to="/farmerDashboard">কৃষক</NavLink></li>
 
         <li> {user ? <button onClick={logout} className=''><NavLink to="/">বের হোন</NavLink></button> : <NavLink to="/login">নিবন্ধন করুন</NavLink>}</li>
-
+        <li><NavLink to="/FarmerRequest"> <button class="btn btn-accent">কৃষক হোন</button></NavLink></li>
        
 
     </>
