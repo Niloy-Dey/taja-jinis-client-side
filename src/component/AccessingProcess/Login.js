@@ -105,11 +105,11 @@ const Login = () => {
                         <input className='btn w-full max-w-xs text-white' type="submit" value="প্রবেশ করুন" />
                     </form>
                     <p><small>আপনি যদি নতুন হয়ে থাকেন <Link className='text-primary' to="/signUp"> তাহলে নিবন্ধন সম্পন্ন করুন</Link></small></p>
-                    <div className="divider">অথবা</div>
+                    {/* <div className="divider">অথবা</div>
                     <button
                         onClick={() => signInWithGoogle()}
                         className="btn btn-outline"
-                    >গুগলের সাহায্যে প্রবেশ করুন</button>
+                    >গুগলের সাহায্যে প্রবেশ করুন</button> */}
                 </div>
             </div>
         </div >
