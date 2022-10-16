@@ -1,0 +1,99 @@
+[
+    {
+        "name": "পেয়াজ",
+        "description": "তাজা সবজি",
+        "category": "vegetable",
+        "price": "45",
+        "stock": "100",
+        "image": "https://i.ibb.co/Yky515j/peyaj.webp"
+    },
+    {
+        "name": "আলু",
+        "description": "তাজা সবজি",
+        "category": "vegetable",
+        "price": "45",
+        "stock": "100",
+        "image": "https://i.ibb.co/QfKGP7d/alu.webp"
+    },
+    {
+        "name": "টমেটো",
+        "description": "তাজা সবজি",
+        "category": "vegetable",
+        "price": "29",
+        "stock": "100",
+        "image": "https://i.ibb.co/LRRgXLS/tomato.webp"
+    },
+    {
+        "name": "ঢেঁড়স",
+        "description": "তাজা সবজি",
+        "category": "vegetable",
+        "price": "25",
+        "stock": "100",
+        "image": "https://i.ibb.co/VwB4v7m/dheros.webp"
+    },
+    {
+        "name": "মিষ্ট কুমড়া",
+        "description": "তাজা সবজি",
+        "category": "vegetable",
+        "price": "120",
+        "stock": "100",
+        "image": "https://i.ibb.co/pfR0BDP/misti-kumra.webp"
+    },
+    {
+        "name": "তেজ পাতা",
+        "description": "তাজা মশলা",
+        "category": "spices",
+        "price": "45",
+        "stock": "100",
+        "image": "https://i.ibb.co/F6kGcxz/tej-pata.webp"
+    },
+    {
+        "name": "হলুদ",
+        "description": "তাজা মশলা",
+        "category": "spices",
+        "price": "45",
+        "stock": "100",
+        "image": "https://i.ibb.co/28njYyT/holud.webp"
+    },
+    {
+        "name": "ছুরি শুটকি",
+        "description": "তাজা শুটকি",
+        "category": "dryfish",
+        "price": "25",
+        "stock": "100",
+        "image": "https://i.ibb.co/S70p1WG/churi-dry-fish-250-gm.webp"
+    },
+    {
+        "name": "আপেল",
+        "description": "তাজা ফল",
+        "category": "fruit",
+        "price": "120",
+        "stock": "100",
+        "image": "https://i.ibb.co/NSX0cg9/apple.webp"
+    },
+    
+    {
+        "name": "ইলিশ মাছ",
+        "description": "তাজা মাছ",
+        "category": "fish",
+        "price": "120",
+        "stock": "100",
+        "image": "https://i.ibb.co/CndT7dr/hilsha-fish.webp"
+    },
+    {
+        "name": "চিনিগুড়া চাল",
+        "description": "সেরা চাল",
+        "category": "rice",
+        "price": "120",
+        "stock": "100",
+        "image": "https://i.ibb.co/9Wp1gk3/chinigura-rice-1-kg.webp"
+    },
+    {
+        "name": "মসুর ডাল",
+        "description": "সেরা ডাল",
+        "category": "dal",
+        "price": "120",
+        "stock": "100",
+        "image": "https://i.ibb.co/ZH2MbFj/moshur-dal-imported-1-kg.webp"
+    }
+]
