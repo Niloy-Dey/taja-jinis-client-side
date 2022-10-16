@@ -42,7 +42,7 @@ const FarmerRequest = () => {
     <div className='flex h-screen justify-center items-center mt-10  bg-green-50'>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
-                    <h2 className="text-center text-2xl font-bold">প্রবেশ করুন</h2>
+                    <h2 className="text-center text-2xl font-bold">কৃষক হবার জন্য আবেদন </h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
 
                         <div className="form-control w-full max-w-xs">
