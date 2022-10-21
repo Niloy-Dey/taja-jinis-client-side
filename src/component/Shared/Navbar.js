@@ -13,9 +13,10 @@ const admin = '';
         signOut(auth);
     }
     const [user] = useAuthState(auth);
-    console.log(user?.email);
+    // console.log(user?.email);
     const menuContent = <>
         <li><NavLink to="/home">হোম</NavLink></li>
+        {/* <li><NavLink to="/chat">chatting</NavLink></li> */}
         <li><NavLink to="/category">ক্যাটাগরি</NavLink></li>
         <li><NavLink to="/about">আমাদের সম্পর্কে</NavLink></li>
         <li><NavLink to="/contact">যোগাযোগ</NavLink></li>
@@ -31,13 +32,14 @@ const admin = '';
         <li><NavLink to="/farmerDashboard">কৃষক</NavLink></li>
 
         <li> {user ? <button onClick={logout} className=''><NavLink to="/">বের হোন</NavLink></button> : <NavLink to="/login">নিবন্ধন করুন</NavLink>}</li>
-
+        <li><NavLink to="/FarmerRequest"> <button class="btn btn-accent">কৃষক হোন</button></NavLink></li>
        
 
     </>
 
     return (
         <div>
+            
             <div className="navbar flex justify-between fixed top-0 z-40 bg-green-700 text-white font-bold">
                 <div className="navbar-start">
                     <Link to="/home" className="btn btn-ghost normal-case text-xl">তাজা জিনিস</Link>
@@ -71,6 +73,7 @@ const admin = '';
                 </div>
 
             </div>
+            
         </div>
     );
 };

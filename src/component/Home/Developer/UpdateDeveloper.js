@@ -4,7 +4,6 @@ import niloy from '../../../assets/developer/niloy1.png'
 import avi from '../../../assets/developer/avishek2.png'
 import najnin from '../../../assets/developer/nipa1.png'
 import arpita from '../../../assets/developer/arpita2 (2).png'
-// import arpita from '../../../assets/developer/arpita2.png'
 import noshin from '../../../assets/developer/noshin1.png'
 const UpdateDeveloper = () => {
     return (
@@ -21,13 +20,13 @@ const UpdateDeveloper = () => {
                         <div className="w-8 h-1 bg-[#4D4C7D] mx-auto"></div>
                         <p className="text-center text-slate-500">Team Member Of Taja Jinis</p>
                         {/* <div class="card-actions justify-center">
-                        <a className='text-[#4D4C7D] text-2xl' href="#">
-                            <FaFacebookF />
-                        </a>
-                        <a className='text-[#4D4C7D] text-2xl' href="#">
-                            <FaLinkedinIn />
-                        </a>
-                    </div> */}
+                                <a className='text-[#4D4C7D] text-2xl' href="#">
+                                    <FaFacebookF />
+                                </a>
+                                <a className='text-[#4D4C7D] text-2xl' href="#">
+                                    <FaLinkedinIn />
+                                </a>
+                            </div> */}
                     </div>
                 </div>
 
@@ -45,13 +44,13 @@ const UpdateDeveloper = () => {
                         <div className="w-8 h-1 bg-[#4D4C7D] mx-auto"></div>
                         <p className="text-center text-slate-500">Team Member Of Taja Jinis</p>
                         {/* <div class="card-actions justify-center">
-                        <a className='text-[#4D4C7D] text-2xl' href="#">
-                            <FaFacebookF />
-                        </a>
-                        <a className='text-[#4D4C7D] text-2xl' href="#">
-                            <FaLinkedinIn />
-                        </a>
-                    </div> */}
+                                <a className='text-[#4D4C7D] text-2xl' href="#">
+                                    <FaFacebookF />
+                                </a>
+                                <a className='text-[#4D4C7D] text-2xl' href="#">
+                                    <FaLinkedinIn />
+                                </a>
+                            </div> */}
                     </div>
                 </div>
             </div>
@@ -75,13 +74,13 @@ const UpdateDeveloper = () => {
                         <div className="w-8 h-1 bg-[#4D4C7D] mx-auto"></div>
                         <p className="text-center text-slate-500">Team Member Of Taja Jinis</p>
                         {/* <div class="card-actions justify-center">
-        <a className='text-[#4D4C7D] text-2xl' href="#">
-            <FaFacebookF />
-        </a>
-        <a className='text-[#4D4C7D] text-2xl' href="#">
-            <FaLinkedinIn />
-        </a>
-    </div> */}
+                            <a className='text-[#4D4C7D] text-2xl' href="#">
+                                <FaFacebookF />
+                            </a>
+                            <a className='text-[#4D4C7D] text-2xl' href="#">
+                                <FaLinkedinIn />
+                            </a>
+                        </div> */}
                     </div>
                 </div>
 
@@ -100,13 +99,13 @@ const UpdateDeveloper = () => {
                         <div className="w-8 h-1 bg-[#4D4C7D] mx-auto"></div>
                         <p className="text-center text-slate-500">Team Member Of Taja Jinis</p>
                         {/* <div class="card-actions justify-center">
-        <a className='text-[#4D4C7D] text-2xl' href="#">
-            <FaFacebookF />
-        </a>
-        <a className='text-[#4D4C7D] text-2xl' href="#">
-            <FaLinkedinIn />
-        </a>
-    </div> */}
+                                <a className='text-[#4D4C7D] text-2xl' href="#">
+                                    <FaFacebookF />
+                                </a>
+                                <a className='text-[#4D4C7D] text-2xl' href="#">
+                                    <FaLinkedinIn />
+                                </a>
+                            </div> */}
                     </div>
                 </div>
 
@@ -126,13 +125,13 @@ const UpdateDeveloper = () => {
                         <div className="w-8 h-1 bg-[#4D4C7D] mx-auto"></div>
                         <p className="text-center text-slate-500">Team Member Of Taja Jinis</p>
                         {/* <div class="card-actions justify-center">
-        <a className='text-[#4D4C7D] text-2xl' href="#">
-            <FaFacebookF />
-        </a>
-        <a className='text-[#4D4C7D] text-2xl' href="#">
-            <FaLinkedinIn />
-        </a>
-    </div> */}
+                                <a className='text-[#4D4C7D] text-2xl' href="#">
+                                    <FaFacebookF />
+                                </a>
+                                <a className='text-[#4D4C7D] text-2xl' href="#">
+                                    <FaLinkedinIn />
+                                </a>
+                            </div> */}
                     </div>
 
                 </div>

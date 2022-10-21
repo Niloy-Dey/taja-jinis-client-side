@@ -1,10 +1,12 @@
 import React from 'react';
+
 import banner1 from '../../../assets/banner/banner-1.png'
 import banner2 from '../../../assets/banner/banner-2.png'
 import banner3 from '../../../assets/banner/banner-3.png'
 const Banner = () => {
     return (
         <div>
+          
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src={banner1}  className="w-full" />

@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './component/About/About';
+import FarmerRequest from './component/AccessingProcess/FarmerRequest';
 import Login from './component/AccessingProcess/Login';
 import SignUp from './component/AccessingProcess/SignUp';
 import AddProduct from './component/Admin/AddProduct';
@@ -33,6 +34,7 @@ import Shak from './component/Home/Category/Shak';
 import Sutki from './component/Home/Category/Sutki';
 import Vegetable from './component/Home/Category/Vegetable';
 import Home from './component/Home/Home';
+import Chat from './component/Messenger/Chat';
 import Messenger from './component/Messenger/Messenger';
 import NotFound from './component/NotFound/NotFound';
 import CompletedOrder from './component/Order/CompletedOrder';
@@ -62,11 +64,13 @@ function App() {
         <Route path='/shak' element={<Shak></Shak>}></Route>
         <Route path='/rice' element={<Rice></Rice>}></Route>
         <Route path='/vegetable' element={<Vegetable></Vegetable>}></Route>
-
+{/* chatting */}
+        <Route path='/chat' element={<Chat></Chat>}></Route>
 
 
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signUp' element={<SignUp></SignUp>}></Route>
+        <Route path='/FarmerRequest' element={<FarmerRequest></FarmerRequest>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
 
