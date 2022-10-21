@@ -18,7 +18,7 @@ const admin = '';
         <li><NavLink to="/home">হোম</NavLink></li>
         <li><NavLink to="/category">ক্যাটাগরি</NavLink></li>
         <li><NavLink to="/about">আমাদের সম্পর্কে</NavLink></li>
-        <li><NavLink to="/contract">যোগাযোগ</NavLink></li>
+        <li><NavLink to="/contact">যোগাযোগ</NavLink></li>
         {
             user && <li><NavLink to="/dashboard"> ড্যাশবোর্ড</NavLink></li>
         }
@@ -38,7 +38,7 @@ const admin = '';
 
     return (
         <div>
-            <div className="navbar flex justify-between fixed top-0 z-50 bg-green-700 text-white font-bold">
+            <div className="navbar flex justify-between fixed top-0 z-40 bg-green-700 text-white font-bold">
                 <div className="navbar-start">
                     <Link to="/home" className="btn btn-ghost normal-case text-xl">তাজা জিনিস</Link>
                 </div>
@@ -58,11 +58,11 @@ const admin = '';
 
                         {/* {
                             <NavLink to="/dashboard"> </NavLink> && 
-                            <label for="my-drawer" className=" bg-green-700 drawer-button"> <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg> </label>     
+                            <label for="my-drawer" className=" bg-green-700 drawer-button"> <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg> </label>     
                         } */}
-                        <label for="my-drawer" className=" bg-green-700 drawer-button"> <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg> </label>
+                        <label for="my-drawer" className=" bg-green-700 drawer-button"> <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg> </label>
 
-                        {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg> */}
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg> */}
                     </label>
 
                     <ul tabIndex="0" className=" bg-green-700 menu menu-compact dropdown-content mt-3 p-2 shadow  rounded-box w-52">
