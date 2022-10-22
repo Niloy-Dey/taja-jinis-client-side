@@ -6,6 +6,7 @@ import Login from './component/AccessingProcess/Login';
 import SignUp from './component/AccessingProcess/SignUp';
 import AddProduct from './component/Admin/AddProduct';
 import Admin from './component/Admin/Admin';
+import AllFarmers from './component/Admin/AllFarmers';
 import AllOrder from './component/Admin/AllOrder';
 import AllPayment from './component/Admin/AllPayment';
 import AllReview from './component/Admin/AllReview';
@@ -93,6 +94,7 @@ function App() {
 
         <Route path='/admin' element={<Admin></Admin>}>
           <Route path='allUsers/' element={<AllUsers></AllUsers>}></Route>
+          <Route path='allFarmers/' element={<AllFarmers></AllFarmers>}></Route>
           <Route path='allOrder' element={<AllOrder></AllOrder>}></Route>
           <Route path='allPayment' element={<AllPayment></AllPayment>}></Route>
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
@@ -103,7 +105,7 @@ function App() {
         <Route path='/order/:productId' element={<Order></Order>}></Route>
         <Route path='/completedOrder' element={<CompletedOrder></CompletedOrder>}></Route>
 
-      
+        
       </Routes>
       <Messenger></Messenger>
       <Footer></Footer>

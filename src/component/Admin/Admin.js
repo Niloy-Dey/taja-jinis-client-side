@@ -20,6 +20,7 @@ const Admin = () => {
             <label for="my-drawer" className="drawer-overlay"></label>
             <ul className="menu  p-4 overflow-y-auto w-44 lg:w-80 bg-green-100 text-base-content">
                 <li> <NavLink to="/admin/allUsers">All Users</NavLink> </li>
+                <li> <NavLink to="/admin/allFarmers">All Farmers</NavLink> </li>
                 <li> <NavLink to="/admin/allOrder">All Order</NavLink> </li>
                 <li> <NavLink to="/admin/allPayment">All Payment</NavLink> </li>
                 <li> <NavLink to="/admin/addProduct">Add Product</NavLink> </li>

@@ -9,7 +9,7 @@ import LoadingSpiner from '../Shared/LoadingSpiner';
 
 const SignUp = () => {
   
-
+    const [loginData, setLoginData] = useState({});
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
@@ -17,13 +17,13 @@ const SignUp = () => {
     const navigate = useNavigate();
     let signInError;
 
-
+    console.log("In sign up page");
     if (error || gError || updateError) {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
     }
 
     if (user || gUser) {
-        // console.log(user);
+        console.log(user);
        
     }
     if(loading | gLoading){
@@ -32,9 +32,51 @@ const SignUp = () => {
 
 
     const onSubmit = async data => {
-        console.log(data);        
+        // console.log(data);        
+        // console.log(register);
         await createUserWithEmailAndPassword(data.email, data.password);
 
+        
+        // const userEmail = data.email;
+        // const userPassword = data.password;
+        
+        // console.log(user)
+        const userObject = {
+
+            email:data.email,
+            name:data.name,
+            password:data.password,
+            role:'user'
+        }
+
+       console.log(userObject);
+        setLoginData(userObject);
+
+        // const field = e.target.name;
+        // const value = e.target.value;
+        // const newLoginData = { ...loginData };
+        // newLoginData[field] = value;
+        // setLoginData(newLoginData);
+        
+
+
+
+        fetch('http://localhost:5000/user', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(userObject)
+        })
+
+
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    console.log("form submitted successfully")
+                }
+            })
+        // e.preventDefault();
 
         navigate('/home');
         toast('অ্যাকাউন্ট তৈরি করা হয়েছে');
@@ -128,7 +170,7 @@ const SignUp = () => {
                         {signInError}
 
 
-                        <div className='text-sm my-3'>
+                        {/* <div className='text-sm my-3'>
                             <span className='mr-3 '>পছন্দ করুন : </span>
                             <span className="form-check text-sm my-3 ">
                                 <label htmlFor="farmer">
@@ -157,7 +199,7 @@ const SignUp = () => {
                                     সাধারণ ব্যবহারকারী
                                 </label>
                             </span>
-                        </div>
+                        </div> */}
 
 
                         <input className='btn w-full max-w-xs text-white' type="submit" value="নিবন্ধন করুন" />

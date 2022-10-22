@@ -1,8 +1,10 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useUser from '../../hooks/useUser';
 
 
 
@@ -12,8 +14,21 @@ const admin = '';
     const logout = () => {
         signOut(auth);
     }
+    
     const [user] = useAuthState(auth);
-    // console.log(user?.email);
+    console.log(user)
+    const [person] = useUser();
+    console.log(person?.role)
+    const personRole = person?.role;
+    console.log("Hello Navbar")
+    
+    let check = false
+    if(personRole == 'farmer' )
+    {
+         check = true;
+    }
+    
+    
     const menuContent = <>
         <li><NavLink to="/home">হোম</NavLink></li>
         {/* <li><NavLink to="/chat">chatting</NavLink></li> */}
@@ -21,18 +36,37 @@ const admin = '';
         <li><NavLink to="/about">আমাদের সম্পর্কে</NavLink></li>
         <li><NavLink to="/contact">যোগাযোগ</NavLink></li>
         {
-            user && <li><NavLink to="/dashboard"> ড্যাশবোর্ড</NavLink></li>
+            personRole=='user'  && <li><NavLink to="/dashboard"> ড্যাশবোর্ড</NavLink></li>
         }
-{/*         
+
         {
-            admin &&    <li><NavLink to="/admin">এডমিন</NavLink></li> 
-        } */}
-         <li><NavLink to="/admin">এডমিন</NavLink></li> 
-        
-        <li><NavLink to="/farmerDashboard">কৃষক</NavLink></li>
+            personRole=='admin' &&    <li><NavLink to="/admin">এডমিন</NavLink></li> 
+        }
+        {
+            personRole=='admin' &&    <li><NavLink to="/dashboard"> ড্যাশবোর্ড</NavLink></li>
+        }
+        {
+            personRole=='admin' &&    <li><NavLink to="/farmerDashboard">কৃষক</NavLink></li>
+        }
+
+        {
+            personRole=='farmer' &&    <li><NavLink to="/farmerDashboard">কৃষক</NavLink></li>
+        } 
+
+        {/* <li><NavLink to="/admin">এডমিন</NavLink></li>  */}
+        {/* <li><NavLink to="/farmerDashboard">কৃষক</NavLink></li> */}
 
         <li> {user ? <button onClick={logout} className=''><NavLink to="/">বের হোন</NavLink></button> : <NavLink to="/login">নিবন্ধন করুন</NavLink>}</li>
-        <li><NavLink to="/FarmerRequest"> <button class="btn btn-accent">কৃষক হোন</button></NavLink></li>
+
+        {
+
+            personRole=='user'  && <li><button class="btn btn-accent"><NavLink to="/FarmerRequest"> কৃষক হোন</NavLink></button></li>  
+        }
+        
+        {
+
+        personRole=='admin'  && <li><button class="btn btn-accent"><NavLink to="/FarmerRequest"> কৃষক হোন</NavLink></button></li>  
+        }
        
 
     </>
