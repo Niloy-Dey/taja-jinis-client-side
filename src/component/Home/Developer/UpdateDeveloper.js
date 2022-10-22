@@ -70,7 +70,8 @@ const UpdateDeveloper = () => {
                     <div className="w-[170px] h-[170px] rotate-45 bg-[#4D4C7D] mx-auto mt-[-170px] z-0"></div>
                     <div class="card-body">
                         <h2 className="text-[#4D4C7D] text-center text-2xl  font-bold uppercase">Najnin aktar nipa</h2>
-                        <p className="text-center font-bold">Manager</p>
+                        <p className="text-center font-bold">Miss universe</p>
+                        {/* <p className="text-center font-bold">Manager</p> */}
                         <div className="w-8 h-1 bg-[#4D4C7D] mx-auto"></div>
                         <p className="text-center text-slate-500">Team Member Of Taja Jinis</p>
                         {/* <div class="card-actions justify-center">
@@ -95,7 +96,8 @@ const UpdateDeveloper = () => {
                     <div className="w-[170px] h-[170px] rotate-45 bg-[#4D4C7D] mx-auto mt-[-170px] z-0"></div>
                     <div class="card-body">
                         <h2 className="text-[#4D4C7D] text-center text-2xl  font-bold uppercase">arpita dhar</h2>
-                        <p className="text-center font-bold">Advisor</p>
+                        <p className="text-center font-bold">Miss world </p>
+                        {/* <p className="text-center font-bold">Advisor</p> */}
                         <div className="w-8 h-1 bg-[#4D4C7D] mx-auto"></div>
                         <p className="text-center text-slate-500">Team Member Of Taja Jinis</p>
                         {/* <div class="card-actions justify-center">
@@ -121,7 +123,8 @@ const UpdateDeveloper = () => {
                     <div className="w-[170px] h-[170px] rotate-45 bg-[#4D4C7D] mx-auto mt-[-170px] z-0"></div>
                     <div class="card-body">
                         <h2 className="text-[#4D4C7D] text-center text-2xl font-bold uppercase">Noshin shepa</h2>
-                        <p className="text-center font-bold">Supervisor</p>
+                        <p className="text-center font-bold">Miss india</p>
+                        {/* <p className="text-center font-bold">Supervisor</p> */}
                         <div className="w-8 h-1 bg-[#4D4C7D] mx-auto"></div>
                         <p className="text-center text-slate-500">Team Member Of Taja Jinis</p>
                         {/* <div class="card-actions justify-center">

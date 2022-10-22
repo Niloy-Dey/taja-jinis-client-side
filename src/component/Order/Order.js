@@ -8,6 +8,7 @@ const Order = () => {
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
     const { productId } = useParams();
+    console.log(productId);
     const [products] = useProduct([]);
     const clickedProduct = products?.find(pd => pd?._id === productId);
     const {_id, name, price, image, description, quantity } = clickedProduct || {};
