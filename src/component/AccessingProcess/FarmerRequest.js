@@ -66,8 +66,8 @@ const FarmerRequest = () => {
         e.preventDefault();
     }
     return(<>
-    <div className='flex h-screen justify-center items-center mt-10  bg-green-50'>
-            <div className="card lg:w-[700px] md:w-96 w-96 bg-base-100 shadow-xl">
+    <div className='flex py-32  justify-center items-center   bg-green-50'>
+            <div className="card   lg:w-[700px] md:w-[500px] w-80 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">কৃষক হবার জন্য আবেদন </h2>
                     <form onSubmit={onSubmit}>
