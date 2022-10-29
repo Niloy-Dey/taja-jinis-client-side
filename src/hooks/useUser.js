@@ -18,8 +18,8 @@ const useUser = () =>{
     useEffect(()=>{
         
         // setIsLoading(true);
-        // fetch(`https://taja-jinis.herokuapp.com/user`)
-        fetch('http://localhost:5000/user')
+        fetch(`https://taja-jinis.herokuapp.com/user`)
+        // fetch('http://localhost:5000/user')
         .then(res => res.json())
         .then(data =>{
             setUsers(data);
@@ -42,9 +42,9 @@ const useUser = () =>{
     // const testPerson2 = testPerson.filter()
     // console.log(person);
     const person = testPerson[0];
-    console.log(person)
+    // console.log(person)
     
 
-    return [person, setUsers];
+    return [person, users, setUsers];
 }
 export default useUser;

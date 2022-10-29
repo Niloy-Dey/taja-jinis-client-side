@@ -61,7 +61,7 @@ const SignUp = () => {
 
 
 
-        fetch('http://localhost:5000/user', {
+        fetch('https://taja-jinis.herokuapp.com/user', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

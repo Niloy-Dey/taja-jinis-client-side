@@ -6,7 +6,7 @@ const AllFarmers = () => {
 
       // console.log(allOrders)
       useEffect(() => {
-        fetch('http://localhost:5000/farmerRequest')
+        fetch('https://taja-jinis.herokuapp.com/farmerRequest')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -36,7 +36,7 @@ const AllFarmers = () => {
     // Updating status by function
     const handleUpdatedStatus = (_id) => {
         alert('updated');
-        const url = `http://localhost:5000/farmerRequest/${_id}`;
+        const url = `https://taja-jinis.herokuapp.com/${_id}`;
         const updatedStatus = 'accepted';
         const updatedFarmer = { status: updatedStatus }
         fetch(url, {
