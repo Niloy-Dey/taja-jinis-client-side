@@ -7,6 +7,7 @@ import NeedHelp from './NeedHelp/NeedHelp';
 import Offer from './Offer/Offer';
 import ShowReview from './ShowReview';
 import Marquee from 'react-fast-marquee';
+import Review from './Review';
 
 const Home = () => {
     return (
@@ -29,7 +30,9 @@ const Home = () => {
             {/* <Developer></Developer> */}
             <UpdateDeveloper></UpdateDeveloper>
 
-            <ShowReview></ShowReview>
+            {/* <ShowReview></ShowReview> */}
+            <h1 className='text-2xl text-orange-400 font-bold text-center my-3 '>আমাদের ক্লায়েন্ট মতামত </h1>
+            <Review></Review>
 
             
             <NeedHelp></NeedHelp>

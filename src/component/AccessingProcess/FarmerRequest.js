@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfil
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const FarmerRequest = () => {
     // const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -59,9 +60,11 @@ const FarmerRequest = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.insertedId) {
-                    console.log("form submitted successfully")
-                }
+                toast("আপনার ডাটা গৃহীত হয়েছে");
+                // if (data.insertedId) {
+                //     console.log("form submitted successfully")
+                // }
+                document.getElementById("myForm").reset();
             })
         e.preventDefault();
     }
@@ -70,7 +73,7 @@ const FarmerRequest = () => {
             <div className="card   lg:w-[700px] md:w-[500px] w-80 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">কৃষক হবার জন্য আবেদন </h2>
-                    <form onSubmit={onSubmit}>
+                    <form id="myForm"  onSubmit={onSubmit}>
                         {/*Farmer profile Image */}
                         <div className="form-control ">
                             <label className="label">
