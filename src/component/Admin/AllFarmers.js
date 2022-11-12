@@ -9,25 +9,28 @@ const AllFarmers = () => {
         fetch('https://taja-jinis.herokuapp.com/farmerRequest')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setRequests(data);
             })
     }, [requests])
 
     // deleting requests
     const handleDelete = (_id) => {
+        console.log(_id);
         // const confirm = window.confirm('Do you want to delete?')
         // if (confirm) {
-            const url = `http://localhost:5000/farmerRequest/${_id}`;
+            // const url = 'http://localhost:5000/farmerRequest/${_id}`;
+            const url = `https://taja-jinis.herokuapp.com/farmerRequest/${_id}`;
             fetch(url, {
                 method: 'DELETE',
             })
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        alert('deleted seccessfully');
+                        alert('deleted successfully');
                         const remainingRequests = requests.filter(request => request._id !== _id)
                         setRequests(remainingRequests);
+                        
                     }
                 })
         // }
@@ -36,7 +39,7 @@ const AllFarmers = () => {
     // Updating status by function
     const handleUpdatedStatus = (_id) => {
         alert('updated');
-        const url = `https://taja-jinis.herokuapp.com/${_id}`;
+        const url = `https://taja-jinis.herokuapp.com/farmerRequest/${_id}`;
         const updatedStatus = 'accepted';
         const updatedFarmer = { status: updatedStatus }
         fetch(url, {
@@ -55,15 +58,15 @@ const AllFarmers = () => {
                             <table class="table w-full ">
                                 <thead>
                                     <tr>
-                                        <th>serial</th>
-                                        <th>Image</th>
-                                        <th>Farmer Name</th>
-                                        <th>Farmer email</th>
-                                        <th>Address</th>
-                                        <th>Bikash Number</th>
-                                        <th>NID Number</th>
-                                        <th>Delete</th>
-                                        <th>Status</th>
+                                        <th className="text-xs">serial</th>
+                                        <th className="text-xs">Image</th>
+                                        <th className="text-xs">Farmer Name</th>
+                                        <th className="text-xs">Farmer email</th>
+                                        <th className="text-xs">Address</th>
+                                        <th className="text-xs">Bikash Number</th>
+                                        <th className="text-xs">NID Number</th>
+                                        <th className="text-xs">Delete</th>
+                                        <th className="text-xs">Status</th>
                                     </tr>
                                 </thead>
                             <tbody>
@@ -80,16 +83,16 @@ const AllFarmers = () => {
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>{o.name}</td>
-                                        <td>{o.email}</td>
-                                        <td>{o.address}</td>
-                                        <td>{o.bikashNumber}</td>
-                                        <td>{o.nidNumber}</td>
-                                        <th><button class="btn btn-sm  bg-red-100 text-black hover:text-white"
+                                        <td className="text-xs">{o.email}</td>
+                                        <td className="text-xs">{o.name}</td>
+                                        <td className="text-xs">{o.address}</td>
+                                        <td className="text-xs">{o.bikashNumber}</td>
+                                        <td className="text-xs">{o.nidNumber}</td>
+                                        <th className="text-xs"><button class="btn btn-xs  bg-red-100 text-black hover:text-white"
                                                     onclick={() => handleDelete(o._id)}
                                         >Delete</button></th>
                                         <th>
-                                            <button class="btn btn-sm  bg-green-100 text-black hover:text-white"
+                                            <button class="btn btn-xs  bg-green-100 text-black hover:text-white"
                                                     onClick={() => handleUpdatedStatus(o._id)}
                                             >{o.status}</button>
                                         </th>

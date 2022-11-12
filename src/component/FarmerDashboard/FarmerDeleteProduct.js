@@ -37,7 +37,7 @@ const FarmerDeleteProduct = () => {
 
                         {
                             products.map(tool =>
-                                <div className='card-style my-5  ' key={tool.id}>
+                                <div className='card-style my-5  mx-5' key={tool.id}>
                                     <div className='flex justify-around	 w-90 h-40 bg-green-100 shadow-lg rounded-lg p-10 '>
                                         <img className='w-20 mr-2' src={tool.image} alt="" />
                                         <div className='mx-2'>
@@ -45,7 +45,7 @@ const FarmerDeleteProduct = () => {
                                             <h5> <b>{tool.price}</b> </h5>
                                             <h5> <b>{tool.quantity}</b> </h5>
                                         </div>
-                                        <h5 className='ml-2'><button onClick={() => handleDelete(tool._id)} className="delete-button  bg-green-400  p-2 rounded-lg text-white "> মুছে ফেলুন  </button></h5></div>
+                                        <h5 className='ml-2'><button onClick={() => handleDelete(tool._id)} className="delete-button  btn-sm  rounded-lg text-black bg-red-300 hover:text-white hover:bg-gray-600 text-xs  "> মুছে ফেলুন  </button></h5></div>
                                 </div>)
                         }
 
@@ -53,7 +53,7 @@ const FarmerDeleteProduct = () => {
                 </div>
             </div>
             <div className='text-center'>
-                <Link to='/farmerDashboard/farmerAddProduct'> <button className="btn bg-green-400">নতুন পণ্য যোগ করুন</button> </Link>
+                <Link to='/farmerDashboard/farmerAddProduct'> <button className="btn bg-green-400 ">নতুন পণ্য যোগ করুন</button> </Link>
             </div>
         </div>
     );

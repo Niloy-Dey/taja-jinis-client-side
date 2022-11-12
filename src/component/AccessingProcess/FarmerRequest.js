@@ -16,7 +16,7 @@ const FarmerRequest = () => {
     // ] = useCreateUserWithEmailAndPassword(auth);
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-    const [request, setRequest] = useState({status: "pending"});
+    const [request, setRequest] = useState({ status: "pending" });
 
 
 
@@ -36,7 +36,7 @@ const FarmerRequest = () => {
     const handleOnBlur = (e) => {
         const field = e.target.name;
         const value = e.target.value;
-        const newRequestData = {...request};
+        const newRequestData = { ...request };
         newRequestData[field] = value;
         setRequest(newRequestData);
     }
@@ -49,8 +49,8 @@ const FarmerRequest = () => {
     //     console.log(data);
     // }
     const onSubmit = (e) => {
-
-        fetch('https://taja-jinis.herokuapp.com/farmerRequest', {
+            // fetch('http://localhost:5000/farmerRequest', {
+            fetch('https://taja-jinis.herokuapp.com/farmerRequest', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -65,15 +65,15 @@ const FarmerRequest = () => {
             })
         e.preventDefault();
     }
-    return(<>
-    <div className='flex py-32  justify-center items-center   bg-green-50'>
+    return (<>
+        <div className='flex py-32  justify-center items-center   bg-green-50'>
             <div className="card   lg:w-[700px] md:w-[500px] w-80 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">কৃষক হবার জন্য আবেদন </h2>
                     <form onSubmit={onSubmit}>
                         {/*Farmer profile Image */}
                         <div className="form-control ">
-                        <label className="label">
+                            <label className="label">
                                 <span className="label-text">ছবি</span>
                             </label>
                             <input
@@ -82,7 +82,7 @@ const FarmerRequest = () => {
                                 placeholder="ছবি"
                                 className="input input-bordered"
                                 onBlur={handleOnBlur}
-                                />
+                            />
                         </div>
 
                         {/* Farmer Name */}
@@ -96,9 +96,9 @@ const FarmerRequest = () => {
                                 placeholder="নাম"
                                 className="input input-bordered "
                                 onBlur={handleOnBlur}
-                                />
+                            />
                         </div>
-                        
+
 
                         {/* Farmer Email/ Number */}
                         <div className="form-control ">
@@ -111,15 +111,15 @@ const FarmerRequest = () => {
                                 placeholder="ইমেল"
                                 className="input input-bordered "
                                 onBlur={handleOnBlur}
-                                
-                                />
+
+                            />
                             {/* <label className="label">
                                 {errors.email?.type === 'required' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
                                 {errors.email?.type === 'pattern' && <span className="label-text-alt text-red-500">{errors.email.message}</span>}
                             </label> */}
 
                         </div>
-                        
+
                         {/* Farmer Bkash Number */}
                         <div className="form-control ">
                             <label className="label">
@@ -131,11 +131,11 @@ const FarmerRequest = () => {
                                 placeholder="বিকাশ নম্বর"
                                 className="input input-bordered "
                                 onBlur={handleOnBlur}
-                                
-                                />
+
+                            />
                         </div>
 
-                 
+
 
                         {/* NID Number */}
                         <div className="form-control ">
@@ -148,8 +148,8 @@ const FarmerRequest = () => {
                                 placeholder="এন.আইডি নম্বর"
                                 className="input input-bordered "
                                 onBlur={handleOnBlur}
-                                
-                                />
+
+                            />
                         </div>
 
 
@@ -164,8 +164,8 @@ const FarmerRequest = () => {
                                 placeholder="ঠিকানা"
                                 className="input input-bordered "
                                 onBlur={handleOnBlur}
-                                
-                                />
+
+                            />
                         </div>
 
                         {/* Farmer Password*/}
@@ -179,16 +179,16 @@ const FarmerRequest = () => {
                                 placeholder="পাসওয়ার্ড"
                                 className="input input-bordered "
                                 onBlur={handleOnBlur}
-                                // {...register("password", {
-                                //     required: {
-                                //         value: true,
-                                //         message: 'Password is Required'
-                                //     },
-                                //     minLength: {
-                                //         value: 6,
-                                //         message: 'Must be 6 characters or longer'
-                                //     }
-                                // })}
+                            // {...register("password", {
+                            //     required: {
+                            //         value: true,
+                            //         message: 'Password is Required'
+                            //     },
+                            //     minLength: {
+                            //         value: 6,
+                            //         message: 'Must be 6 characters or longer'
+                            //     }
+                            // })}
                             />
                             {/* <label className="label">
                                 {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
@@ -199,9 +199,9 @@ const FarmerRequest = () => {
 
 
                         {/* {signInError} */}
-                        <input className='btn w-full text-white' 
-                               type="submit" 
-                               value="জমা দিন" />
+                        <input className='btn w-full text-white'
+                            type="submit"
+                            value="জমা দিন" />
                     </form>
                     {/* <p><small>আপনি যদি নতুন হয়ে থাকেন <Link className='text-primary' to="/signUp"> তাহলে নিবন্ধন সম্পন্ন করুন</Link></small></p>
                     <div className="divider">অথবা</div>
