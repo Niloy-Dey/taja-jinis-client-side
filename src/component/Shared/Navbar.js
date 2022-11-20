@@ -16,11 +16,11 @@ const admin = '';
     }
     
     const [user] = useAuthState(auth);
-    console.log(user)
+    // console.log(user)
     const [person] = useUser();
-    console.log(person?.role)
+    // console.log(person?.role)
     const personRole = person?.role;
-    console.log("Hello Navbar")
+    // console.log("Hello Navbar")
     
     let check = false
     if(personRole == 'farmer' )

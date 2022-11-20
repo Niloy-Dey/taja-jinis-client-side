@@ -33,6 +33,7 @@ import Mosla from './component/Home/Category/Mosla';
 import Rice from './component/Home/Category/Rice';
 import Shak from './component/Home/Category/Shak';
 import Sutki from './component/Home/Category/Sutki';
+import Success from './component/Dashboard/Success';
 import Vegetable from './component/Home/Category/Vegetable';
 import Home from './component/Home/Home';
 import Chat from './component/Messenger/Chat';
@@ -67,6 +68,11 @@ function App() {
         <Route path='/vegetable' element={<Vegetable></Vegetable>}></Route>
 {/* chatting */}
         <Route path='/chat' element={<Chat></Chat>}></Route>
+
+
+{/* payment method success page route  */}
+
+        <Route path='/success' element={<Success></Success>}> </Route>
 
 
         <Route path='/login' element={<Login></Login>}></Route>

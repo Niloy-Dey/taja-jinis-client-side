@@ -31,7 +31,7 @@ const useUser = () =>{
     const emailId = user?.email;
     // console.log(user?.email)
     const testPerson = users?.filter(user => emailId === user?.email)
-    console.log(testPerson)
+    // console.log(testPerson)
     // setPerson(testPerson)
     // const testPerson = users?.map(u => {
     //     if(u?.email == user?.email)

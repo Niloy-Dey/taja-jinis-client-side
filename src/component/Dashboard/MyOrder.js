@@ -15,7 +15,7 @@ const MyOrder = () => {
             .then(data => {
                 // console.log(data);
                 setAllOrders(data);
-                
+                // console.log(data);
             })
             
     })
@@ -46,6 +46,33 @@ const MyOrder = () => {
                 })
         }
     }
+
+
+
+    const purchase = (o) =>{
+        // console.log(o)
+        const purchaseDetails = {
+            cus_email: o?.userEmail,
+            cus_name: o?.userName,
+            product_image: o?.productImage,
+            product_name: o?.productName,
+            product_profile: o?.productDescription,
+            total_amount:o?.productPrice
+        }
+        // console.log(purchaseDetails);
+        fetch(`http://localhost:5000/init`, {
+            method:'POST',
+            headers:{
+                "content-type": "application/json"
+            },
+            body:JSON.stringify(purchaseDetails)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            window.location.replace(data);
+        })
+    }  
     return (
         <div>
             <div className='  mx-10 '>
@@ -57,8 +84,8 @@ const MyOrder = () => {
                                         <th>ছবি </th>
                                         <th>প্রোডাক্ট নাম </th>
                                         <th>ব্যবহারকারী ইমেইল</th>
-                                        <th>মোট পরিমাণ</th>
-                                        <th>সর্বমোট পরিমাণ</th>
+                                        {/* <th>মোট পরিমাণ</th> */}
+                                        <th>সর্বমোট টাকা </th>
                                         <th>মুছে ফেলুন</th>
                                         <th>পেমেন্ট</th>
                                     </tr>
@@ -80,10 +107,11 @@ const MyOrder = () => {
                                         </td>
                                         <td>{o.productName}</td>
                                         <td>{o.userEmail}</td>
-                                        <td>{o.totalQuantity}</td>
-                                        <td>{o.totalAmount}</td>
+                                        <td>{o.productPrice}</td>
+                                        {/* <td>{o.totalQuantity}</td> */}
+                                        {/* <td>{o.totalAmount}</td> */}
                                         <th><button  onClick={() => handleDelete(o._id)}  class="btn btn-sm  bg-red-100 text-black hover:text-white">মুছে ফেলুন</button></th>
-                                        <th><button class="btn btn-sm  bg-green-100 text-black hover:text-white">পেমেন্ট</button></th>
+                                        <th><button onClick={() => purchase(o)} class="btn btn-sm  bg-green-100 text-black hover:text-white">পেমেন্ট</button></th>
                                     </tr>
                                     )
                                 }
