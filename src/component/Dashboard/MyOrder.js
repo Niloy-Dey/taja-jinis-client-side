@@ -10,7 +10,7 @@ const MyOrder = () => {
 
     // console.log(allOrders)
     useEffect(() => {
-        fetch('https://taja-jinis.herokuapp.com/orderDetails')
+        fetch('https://taja-jinis-server.vercel.app/orderDetails')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -33,7 +33,7 @@ const MyOrder = () => {
         const proceed = window.confirm('Are you sure delete this item ?');
         if (proceed) {
             // const url = `http://localhost:5000/orderDetails/${id}`;
-            const url = `https://taja-jinis.herokuapp.com/orderDetails/${id}`;
+            const url = `https://taja-jinis-server.vercel.app/orderDetails/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

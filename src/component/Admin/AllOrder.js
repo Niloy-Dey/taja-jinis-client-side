@@ -4,7 +4,7 @@ const AllOrder = () => {
     const [allOrders, setAllOrders] = useState([]);
       // console.log(allOrders)
       useEffect(() => {
-        fetch('https://taja-jinis.herokuapp.com/orderDetails')
+        fetch('https://taja-jinis-server.vercel.app/orderDetails')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);

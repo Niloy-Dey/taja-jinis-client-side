@@ -11,7 +11,7 @@ const useProduct = () =>{
     useEffect(()=>{
         
         // setIsLoading(true);
-        fetch(`https://taja-jinis.herokuapp.com/products`)
+        fetch(`https://taja-jinis-server.vercel.app/products`)
         // fetch('http://localhost:5000/products')
         .then(res => res.json())
         .then(data =>{

@@ -32,7 +32,7 @@ const Order = () => {
             productQuantity: productQuantity,
             userMobile: userMobile,
         };
-        const url =`https://taja-jinis.herokuapp.com/orderDetails`;
+        const url =`https://taja-jinis-server.vercel.app/orderDetails`;
         fetch(url, {
             method: 'POST',
             headers:{

@@ -51,7 +51,7 @@ const FarmerRequest = () => {
     // }
     const onSubmit = (e) => {
             // fetch('http://localhost:5000/farmerRequest', {
-            fetch('https://taja-jinis.herokuapp.com/farmerRequest', {
+            fetch('https://taja-jinis-server.vercel.app/farmerRequest', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

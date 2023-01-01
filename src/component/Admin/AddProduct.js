@@ -46,7 +46,7 @@ const FarmerAddProduct = () => {
         
                 /* posting data to database  */
         
-                fetch(`https://taja-jinis.herokuapp.com/products`, {
+                fetch(`https://taja-jinis-server.vercel.app/products`, {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

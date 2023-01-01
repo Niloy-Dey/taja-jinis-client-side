@@ -10,7 +10,7 @@ const FarmerReview = () => {
 
 
 
-        const url = `https://taja-jinis.herokuapp.com/review`;
+        const url = `https://taja-jinis-server.vercel.app/review`;
         fetch(url, {
             method: 'POST',
             headers: {
