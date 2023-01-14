@@ -11,7 +11,7 @@ const Review = () => {
 
 
 
-        const url = `https://taja-jinis-server.vercel.app/review`;
+        const url = `https://taja-jinis-server-side.vercel.app/review`;
         fetch(url, {
             method: 'POST',
             headers: {

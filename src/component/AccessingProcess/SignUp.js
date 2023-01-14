@@ -61,7 +61,7 @@ const SignUp = () => {
 
 
 
-        fetch('https://taja-jinis-server.vercel.app/user', {
+        fetch('https://taja-jinis-server-side.vercel.app/user', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
