@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const AllReview = () => {
     const [allReviews, setAllReviews] = useState([]);
-    const url = `https://taja-jinis-server-side.vercel.app/review`;
+    const url = `https://taja-jinis-backend.onrender.com/review`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -16,7 +16,7 @@ const AllReview = () => {
         const proceed = window.confirm('Are you sure delete this item ?');
         if (proceed) {
             // const url = `http://localhost:5000/products/${id}`;
-            const url = `https://taja-jinis-server-side.vercel.app/review/${id}`;
+            const url = `https://taja-jinis-backend.onrender.com/review/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

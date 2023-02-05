@@ -32,7 +32,7 @@ const Order = () => {
             productQuantity: productQuantity,
             userMobile: userMobile,
         };
-        const url =`https://taja-jinis-server-side.vercel.app/orderDetails`;
+        const url =`https://taja-jinis-backend.onrender.com/orderDetails`;
         fetch(url, {
             method: 'POST',
             headers:{

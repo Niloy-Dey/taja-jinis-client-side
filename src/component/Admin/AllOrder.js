@@ -4,7 +4,7 @@ const AllOrder = () => {
     const [allOrders, setAllOrders] = useState([]);
       // console.log(allOrders)
       useEffect(() => {
-        fetch('https://taja-jinis-server-side.vercel.app/orderDetails')
+        fetch('https://taja-jinis-backend.onrender.com/orderDetails')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);

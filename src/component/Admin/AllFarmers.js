@@ -6,7 +6,7 @@ const AllFarmers = () => {
 
       // console.log(allOrders)
       useEffect(() => {
-        fetch('https://taja-jinis-server-side.vercel.app/farmerRequest')
+        fetch('https://taja-jinis-backend.onrender.com/farmerRequest')
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -20,7 +20,7 @@ const AllFarmers = () => {
         // const confirm = window.confirm('Do you want to delete?')
         // if (confirm) {
             // const url = 'http://localhost:5000/farmerRequest/${_id}`;
-            const url = `https://taja-jinis-server-side.vercel.app/farmerRequest/${_id}`;
+            const url = `https://taja-jinis-backend.onrender.com/farmerRequest/${_id}`;
             fetch(url, {
                 method: 'DELETE',
             })
@@ -39,7 +39,7 @@ const AllFarmers = () => {
     // Updating status by function
     const handleUpdatedStatus = (_id) => {
         alert('updated');
-        const url = `https://taja-jinis-server-side.vercel.app/farmerRequest/${_id}`;
+        const url = `https://taja-jinis-backend.onrender.com/farmerRequest/${_id}`;
         const updatedStatus = 'accepted';
         const updatedFarmer = { status: updatedStatus }
         fetch(url, {

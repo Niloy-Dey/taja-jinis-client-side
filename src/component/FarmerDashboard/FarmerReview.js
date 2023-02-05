@@ -10,7 +10,7 @@ const FarmerReview = () => {
 
 
 
-        const url = `https://taja-jinis-server-side.vercel.app/review`;
+        const url = `https://taja-jinis-backend.onrender.com/review`;
         fetch(url, {
             method: 'POST',
             headers: {

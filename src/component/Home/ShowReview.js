@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const ShowReview = () => {
 
     const [reviews, allReviews ] = useState([]);
-    const url = `https://taja-jinis-server-side.vercel.app/review`;
+    const url = `https://taja-jinis-backend.onrender.com/review`;
     useEffect(() => {
         fetch(url)
         .then(res => res.json())

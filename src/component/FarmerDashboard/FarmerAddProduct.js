@@ -46,7 +46,7 @@ const FarmerAddProduct = () => {
         
                 /* posting data to database  */
         
-                fetch(`https://taja-jinis-server-side.vercel.app/products`, {
+                fetch(`https://taja-jinis-backend.onrender.com/products`, {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

@@ -18,7 +18,7 @@ const useUser = () =>{
     useEffect(()=>{
         
         // setIsLoading(true);
-        fetch(`https://taja-jinis-server-side.vercel.app/user`)
+        fetch(`https://taja-jinis-backend.onrender.com/user`)
         // fetch('http://localhost:5000/user')
         .then(res => res.json())
         .then(data =>{
